@@ -14,10 +14,10 @@ balance_display.text(f'Your current bank balance is: £{st.session_state.balance
 initial_balance = st.number_input(
     "Enter Current Balance (£):", 
     min_value=0,        # makes sure they dont put negative number
-    value=st.session_state.balance, # something about setting a value so the input box always shows your balance
-    step=1 # i think this lets the pick a number by pressing the up/down
+    step=1, # i think this lets the pick a number by pressing the up/down
+    value=st.session_state.balance,  # sets original number in box as 0
+    key="balance_input",  # this input box is called 'balance_input', it doesnt change
 )
-st.session_state.balance = initial_balance
 
 balance_display.text(f'Your current bank balance is: £{st.session_state.balance}')
 
