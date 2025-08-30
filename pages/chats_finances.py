@@ -2,12 +2,11 @@ import streamlit as st
 
 st.title("Bank Balance Simulation")
 
-# create session balance
 if "balance" not in st.session_state:
     st.session_state.balance = 0
 
-# display balance
-st.write(f"Your current bank balance is: £{st.session_state.balance}")
+# --- placeholder at the top ---
+balance_display = st.empty()
 
 # --- ADD MONEY ---
 add_amount = st.number_input("Enter amount to add (£):", min_value=0, step=1, key="add_amount")
@@ -21,5 +20,8 @@ if st.button("Withdraw Money"):
     st.session_state.balance -= withdraw_amount
     st.success(f"You withdrew £{withdraw_amount} from your account!")
 
-# always show balance at the bottom too
-st.write(f"Updated balance: £{st.session_state.balance}")
+#  update the placeholder at the very end
+balance_display.markdown(
+    f"### 💰 Your current bank balance is: **£{st.session_state.balance}**"
+)
+
