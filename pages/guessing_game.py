@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 
 name = st.text_input('Enter your name:')
 if name:
