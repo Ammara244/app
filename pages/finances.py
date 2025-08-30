@@ -1,5 +1,3 @@
-st.title('bank balance simulator')
-
 # creating account
 if "balance" not in st.session_state:
     st.session_state.balance = 0
