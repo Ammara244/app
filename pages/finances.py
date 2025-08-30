@@ -1,3 +1,7 @@
+import streamlit as st
+
+st.title('Bank Balance Simulation')
+
 # creating account
 if "balance" not in st.session_state:
     st.session_state.balance = 0
