@@ -21,7 +21,7 @@ if st.button("Withdraw Money"):
     st.success(f"You withdrew £{withdraw_amount} from your account!")
 
 #  update the placeholder at the very end
-balance_display.markdown(
+balance_display.info(
     f"### 💰 Your current bank balance is: **£{st.session_state.balance}**"
 )
 
