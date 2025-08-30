@@ -13,11 +13,12 @@ balance_display.text(f'Your current bank balance is: £{st.session_state.balance
 # add initial balance
 initial_balance = st.number_input(
     "Enter Current Balance (£):", 
-    min_value=0,         # makes sure they dont put negative number
-    value=st.session_state.balance, # aint got a flipping clue in the world cus chatgpf is a stupid prick
-    # something about setting a value so the input box always shows your balance
+    min_value=0,        # makes sure they dont put negative number
+    value=st.session_state.balance, # something about setting a value so the input box always shows your balance
     step=1 # i think this lets the pick a number by pressing the up/down
 )
+st.session_state.balance = initial_balance
+
 balance_display.text(f'Your current bank balance is: £{st.session_state.balance}')
 
 st.write('Your current bank balance is ', st.session_state.balance)
