@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title('Bank Balance Simulation')
 
-st.write('updated')
+st.write('updated chat page')
 
 # creating account
 if "balance" not in st.session_state:
