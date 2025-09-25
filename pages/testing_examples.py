@@ -1,4 +1,4 @@
-import streamlit as py
+import streamlit as st
 
 st.header('slider widget')
 x = st.slider('x')
