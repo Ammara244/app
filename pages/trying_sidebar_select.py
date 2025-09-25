@@ -13,3 +13,16 @@ elif subpage == "two":
 elif subpage == "three":
     st.header("third choice")
     st.write("this comes up as third.")
+
+
+st.title("Data Analysis")
+
+with st.expander("Data Overview"):
+    st.write("Summary of dataset...")
+    st.write("Shape, columns, etc.")
+
+with st.expander("Data Cleaning"):
+    st.write("Missing values, duplicates...")
+
+with st.expander("Visualization"):
+    st.write("Charts and graphs...")
