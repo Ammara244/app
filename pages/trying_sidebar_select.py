@@ -1,6 +1,6 @@
 import streamlit as st
 
-subpage = st.sidebar.selectbox("Choose a section", ["one", "two", "three"])
+subpage = st.sidebar.selectbox("Choose a section (you coud do this for options of different pages within a page)", ["one", "two", "three"])
 
 if subpage == "one":
     st.header(" first choice")
@@ -15,7 +15,7 @@ elif subpage == "three":
     st.write("this comes up as third.")
 
 
-st.title("Data Analysis")
+st.write('or you coud do this for options of different pages within a page')
 
 with st.expander("Data Overview"):
     st.write("Summary of dataset...")
